@@ -72,6 +72,38 @@ def http_https(address):
         print(str(err))
 
 
+######################################################################
+## get programmation language
+def prog_lang(address):
+    try:
+        print_blue("\n######### PROGRAMMATION LANGUAGE #########")
+        req = requests.get(address)
+        key_lang = "X-Powered-By"
+        if key_lang in req.headers:
+            print_yellow("\n[-] Warning!!!: Programmation language detected")
+            print_yellow("[-] Programmation Language: {}".format(req.headers[key_lang]))
+        else:
+            print_green("\n[+] Great!!!: Your programing language is not display")
+    except Exception as err:
+        print(str(err))
+
+
+######################################################################
+## get web server name
+def webserver_name(address):
+    try:
+        print_blue("\n######### WEB SERVER NAME #########")
+        req = requests.get(address)
+        key_server= "Server"
+        if key_server in req.headers:
+            print_yellow("\n[-] Warning!!!: Web Server Name Detected")
+            print_yellow("[-] Web Server Name: {}".format(req.headers[key_server]))
+        else:
+            print_green("\n[+] Great!!!: Your Web Server Name is not display is not display")
+    except Exception as err:
+        print(str(err))
+
+
 
 ######################################################################
 ## Main program of global scan
@@ -83,9 +115,8 @@ def display_global():
                "[*] get robots.txt \n"
                "[*] get sitemap.xml\n"
                "[*] secure or not secure Hyper Text Transfer Protocol (http/https) \n"
-               "[*] get back language\n"
-               "[*] get WebServer name\n"
-               "[*] get WebServer version\n"
+               "[*] get programmation language\n"
+               "[*] get WebServer name and version\n"
                "[*] list vulnerability of this version and get the version which fix it")
 
     print("")
@@ -96,6 +127,8 @@ def display_global():
         get_robot(site_addr)
         get_sitemap(site_addr)
         http_https(site_addr)
+        prog_lang(site_addr)
+        webserver_name(site_addr)
     #main_index()
 
 

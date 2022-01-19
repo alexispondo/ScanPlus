@@ -1,9 +1,9 @@
+
+# à executer dabord
+# export PYTHONPATH="${PYTHONPATH}:/home/alexispondo/projet_pi/"
 from some_function import *
 from GlobalScan.index import *
-
-
-
-
+from OwaspScan.index import *
 
 def first_display():
     clear()
@@ -24,7 +24,7 @@ def main():
             display_global()
         elif answer == "2":
             print_blue("You have choice scan based on OWASP Top 10")
-            answer = first_display()
+            answer = display_owasp()
         elif answer == "q":
             break
         else:

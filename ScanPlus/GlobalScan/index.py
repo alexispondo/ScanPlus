@@ -108,8 +108,8 @@ def webserver_name(address):
 ######################################################################
 ## Main program of global scan
 def display_global():
-    clear()
-    banner()
+    #clear()
+    #banner()
     print_blue("You have chosen Global Scan")
     print_blue("This Scan allow to :\n"
                "[*] get robots.txt \n"

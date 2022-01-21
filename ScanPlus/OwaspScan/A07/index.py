@@ -1,5 +1,6 @@
 from ScanPlus.some_function import *
 from OwaspScan.A07.BruteForce.index import *
+from OwaspScan.A07.CommonAuth.index import *
 
 def A07():
     print_blue("Your choice is: \nIdentification and Authentication Failures (A07)\n")
@@ -12,4 +13,4 @@ def A07():
     if choice == "1":
         BruteForce()
     elif choice == "2":
-        pass
+        CommonAuth()

@@ -1,0 +1,11 @@
+admin:admin
+admin:pass
+admin:password
+user:1234
+17-ESATIC0072NZ:pk@3@es@t1c
+user:0000
+user:pass
+admin:pass1234
+admin:1234
+root:root
+username:password

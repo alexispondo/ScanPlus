@@ -1,12 +1,11 @@
 import requests
-from ScanPlus.some_function import *
+from .some_function import *
 import os
-from threading import Thread
 
 
 
-def is_bruteforce(url, username, password, submit, error):
-    userPass = os.getcwd() + "/OwaspScan/A03/SQL_i/sqli.txt"
+def test_sqli_payload(url, username, password, submit, error):
+    userPass = os.getcwd() + "/core/wordlist/sqli.txt"
     with open(userPass, "r") as up:
         liste = up.readlines()
         k = 0
@@ -48,26 +47,24 @@ def is_bruteforce(url, username, password, submit, error):
 
 
 def SQL_i():
+    print_blue("\n\n===============================================================================================")
     print_blue("You have choisen SQL injection Attack")
 
     print("\nEnter your url login ex: https://example.com/login")
-    url = input("[ScanPlus] $ url >> ")
+    url = input("scanplus> url >> ")
 
     print("\nEnter the name of Username parameter. ex: user")
-    username = input("[ScanPlus] $ username >> ")
-
-    #print("\nEnter the name of Email parameter. ex: email")
-    #email = input("[ScanPlus] $ email >> ")
+    username = input("scanplus> username >> ")
 
     print("\nEnter the name of your password parameter. ex: pass")
-    password = input("[ScanPlus] $ password >> ")
+    password = input("scanplus> password >> ")
 
 
     print("\nEnter the error result. ex: Identifiants invalides.")
-    error = input("[ScanPlus] $ error >> ")
+    error = input("scanplus> error >> ")
 
     print("\nEnter the name of your submit parameter. ex: submit")
-    submit = input("[ScanPlus] $ submit >> ")
+    submit = input("scanplus> submit >> ")
 
 
-    is_bruteforce(url, username, password, submit, error)
+    test_sqli_payload(url, username, password, submit, error)

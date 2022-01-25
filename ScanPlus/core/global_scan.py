@@ -1,7 +1,7 @@
 import requests
+from .some_function import *
 
-from ScanPlus.some_function import *
-#from ScanPlus.index import main as main_index
+
 
 ######################################################################
 ## Test if URL is valid
@@ -107,9 +107,8 @@ def webserver_name(address):
 
 ######################################################################
 ## Main program of global scan
-def display_global():
-    #clear()
-    #banner()
+def global_scan():
+    print_blue("\n\n===============================================================================================")
     print_blue("You have chosen Global Scan")
     print_blue("This Scan allow to :\n"
                "[*] get robots.txt \n"
@@ -121,7 +120,7 @@ def display_global():
 
     print("")
     print_blue("[-] Enter your web site address. ex: http://127.0.0.1 or https://my_site.com (don't forget http or https)")
-    site_addr = input("[ScanPlus] $ address >> ")
+    site_addr = input("scanplus> address >> ")
     print()
     if is_exist(site_addr):
         get_robot(site_addr)
@@ -129,7 +128,6 @@ def display_global():
         http_https(site_addr)
         prog_lang(site_addr)
         webserver_name(site_addr)
-    #main_index()
 
 
 

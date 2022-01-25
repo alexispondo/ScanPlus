@@ -1,20 +1,16 @@
 import requests
-from ScanPlus.some_function import *
+from .some_function import *
 import os
-from threading import Thread
 
-def is_bruteforce(url, username, password):
-    userPass = os.getcwd() + "/OwaspScan/A07/BruteForce/userPass.txt"
+def can_i_do_brute_force(url, username, password):
+    userPass = os.getcwd() + "/core/wordlist/is_bruteforce.txt"
     with open(userPass, "r") as up:
         liste = up.readlines()
-        #print(liste)
-        #print(type(liste))
         k = 0
         for l in liste:
             data = l.split("\n")[0]
             user = data.split(":")[0]
             passw = data.split(":")[1]
-            #print("user={} & passw={}".format(user, passw))
             headers = {'User-Agent': 'Mozilla/5.0'}
             payload = {username: user, password: passw}
             link = url
@@ -31,7 +27,6 @@ def is_bruteforce(url, username, password):
 
             if resp.status_code == 200:
                 k = k + 1
-                #print(k)
                 if k == 10:
                     print_red("[-] The BruteForce attack is possible because more than 10 connection may be execute")
                     print_red("[-] This site does not have a number of connection limits")
@@ -47,27 +42,17 @@ def is_bruteforce(url, username, password):
 
 
 
-def BruteForce():
+def is_bruteforce():
+    print_blue("\n\n===============================================================================================")
     print_blue("You have choisen BruteForce Attack")
 
     print("\nEnter your url login ex: https://example.com/login")
-    url = input("[ScanPlus] $ url >> ")
+    url = input("scanplus> url >> ")
 
     print("\nEnter the name of Username parameter. ex: user")
-    username = input("[ScanPlus] $ username >> ")
-
-    #print("\nEnter the name of Email parameter. ex: email")
-    #email = input("[ScanPlus] $ email >> ")
+    username = input("scanplus> username >> ")
 
     print("\nEnter the name of your password parameter. ex: pass")
-    password = input("[ScanPlus] $ password >> ")
+    password = input("scanplus> password >> ")
 
-
-    #print("\nEnter the error result. ex: Identifiants invalides.")
-    #error = input("[ScanPlus] $ error >> ")
-
-    #print("\nEnter the name of your submit parameter. ex: submit")
-    #submit = input("[ScanPlus] $ submit >> ")
-    #for x in range(20):
-    #    Thread(target=is_bruteforce(url, username, password)).start()
-    is_bruteforce(url, username, password)#, error)
+    can_i_do_brute_force(url, username, password)

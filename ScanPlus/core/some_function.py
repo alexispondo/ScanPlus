@@ -1,6 +1,7 @@
 import pyfiglet
 from termcolor import colored, cprint
 import os
+import random
 
 
 print_blue = lambda x: cprint(x, 'blue')  # Color text on blue
@@ -12,16 +13,7 @@ print_red_bold = lambda x: cprint(x, "red", attrs=['bold'])
 clear = lambda: os.system('clear')  # clear terminal
 
 def banner():
-    #print()
-    #dev = "Pkaba, Suzou and Sounan"
-    #print_yellow_bold("@@@@@ ScanPlus By {}  @@@@@@@".format(dev))
-    #ascii_banner = pyfiglet.figlet_format("Scan Plus")
-    #print_red_bold(ascii_banner)
-    #print_blue("ScanPlus is a pentesting program developed by the cybersecurity students at ESATIC ({}),\n"
-    #           "This program allow to scan vulnerability WebSite in following some steps\n"
-    #           "We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(dev))
-    #print("\n\n\n")
-    ban = """
+    ban1 = """
 ==============================================================================================================================================
 ======================================================= ScanPlus =============================================================================
 ==============================================================================================================================================                                                                                                                                         
@@ -56,5 +48,49 @@ We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(de
                                                                                                                                          
                                                                                                                                          
 
-    """
-    print_yellow_bold(ban)
+"""
+    ban2 = """
+
+
+  _________                   __________.__                
+ /   _____/ ____ _____    ____\______   \  |  __ __  ______
+ \_____  \_/ ___\\__  \  /    \|     ___/  | |  |  \/  ___/
+ /        \  \___ / __ \|   |  \    |   |  |_|  |  /\___ \ 
+/_______  /\___  >____  /___|  /____|   |____/____//____  >
+        \/     \/     \/     \/                         \/ 
+
+Name: ScanPlus                                                                                                                                         
+Version: v1.0                                                                                                                                         
+Author: @pkaba, @suzou, @sounan                                                                                                                                         
+GitHub: https://github.com/alexispondo/ScanPlus
+
+ScanPlus is a pentesting program developed by the cybersecurity students at ESATIC, his program allow to scan vulnerability WebSite in following some steps.
+We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(dev)
+
+"""
+
+    ban3 = """
+
+ .----------------.  .----------------.  .----------------.  .-----------------. .----------------.  .----------------.  .----------------.  .----------------. 
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+| |    _______   | || |     ______   | || |      __      | || | ____  _____  | || |   ______     | || |   _____      | || | _____  _____ | || |    _______   | |
+| |   /  ___  |  | || |   .' ___  |  | || |     /  \     | || ||_   \|_   _| | || |  |_   __ \   | || |  |_   _|     | || ||_   _||_   _|| || |   /  ___  |  | |
+| |  |  (__ \_|  | || |  / .'   \_|  | || |    / /\ \    | || |  |   \ | |   | || |    | |__) |  | || |    | |       | || |  | |    | |  | || |  |  (__ \_|  | |
+| |   '.___`-.   | || |  | |         | || |   / ____ \   | || |  | |\ \| |   | || |    |  ___/   | || |    | |   _   | || |  | '    ' |  | || |   '.___`-.   | |
+| |  |`\____) |  | || |  \ `.___.'\  | || | _/ /    \ \_ | || | _| |_\   |_  | || |   _| |_      | || |   _| |__/ |  | || |   \ `--' /   | || |  |`\____) |  | |
+| |  |_______.'  | || |   `._____.'  | || ||____|  |____|| || ||_____|\____| | || |  |_____|     | || |  |________|  | || |    `.__.'    | || |  |_______.'  | |
+| |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
+
+Name: ScanPlus                                                                                                                                         
+Version: v1.0                                                                                                                                         
+Author: @pkaba, @suzou, @sounan                                                                                                                                         
+GitHub: https://github.com/alexispondo/ScanPlus
+
+ScanPlus is a pentesting program developed by the cybersecurity students at ESATIC, his program allow to scan vulnerability WebSite in following some steps.
+We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(dev)
+
+"""
+    ban = [ban1, ban2, ban3]
+    print_yellow_bold(random.choice(ban))

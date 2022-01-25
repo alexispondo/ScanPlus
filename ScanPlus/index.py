@@ -1,4 +1,3 @@
-
 # à executer dabord
 # export PYTHONPATH="${PYTHONPATH}:/home/alexispondo/projet_pi/"
 from some_function import *
@@ -13,7 +12,7 @@ def first_display():
     print_blue("2- Scan Based On OWASP Top 10")
     print_blue("q- Quit")
     print("")
-    answer = input("ScanPlus $ Your answer number >> ")
+    answer = input("scan> ")
     return answer
 
 

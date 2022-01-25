@@ -6,14 +6,14 @@ from threading import Thread
 
 
 def is_bruteforce(url, username, password, submit, error):
-    userPass = os.getcwd() + "/OwaspScan/A07/CommonAuth/userPass.txt"
+    userPass = os.getcwd() + "/OwaspScan/A03/SQL_i/sqli.txt"
     with open(userPass, "r") as up:
         liste = up.readlines()
         k = 0
         for l in liste:
             data = l.split("\n")[0]
-            user = data.split(":")[0]
-            passw = data.split(":")[1]
+            user = data
+            passw = data
             headers = {'User-Agent': 'Mozilla/5.0'}
             payload = {username: user, password: passw, submit: "Ok"}
             link = url
@@ -47,8 +47,8 @@ def is_bruteforce(url, username, password, submit, error):
 
 
 
-def CommonAuth():
-    print_blue("You have choisen Common Authentification Attack")
+def SQL_i():
+    print_blue("You have choisen SQL injection Attack")
 
     print("\nEnter your url login ex: https://example.com/login")
     url = input("[ScanPlus] $ url >> ")
@@ -69,6 +69,5 @@ def CommonAuth():
     print("\nEnter the name of your submit parameter. ex: submit")
     submit = input("[ScanPlus] $ submit >> ")
 
-    #for x in range(20):
-    #    Thread(target=is_bruteforce(url, username, password, erroe)).start()
+
     is_bruteforce(url, username, password, submit, error)

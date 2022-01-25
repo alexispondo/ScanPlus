@@ -2,6 +2,7 @@ import requests
 
 from ScanPlus.some_function import *
 from OwaspScan.A07.index import *
+from OwaspScan.A03.index import *
 #from ScanPlus.index import main as main_index
 
 
@@ -34,7 +35,7 @@ def display_owasp():
     elif choice == "2":
         pass
     elif choice == "3":
-        pass
+        A03()
     elif choice == "4":
         pass
     elif choice == "5":
@@ -43,7 +44,6 @@ def display_owasp():
         pass
     elif choice == "7":
         A07()
-        pass
     elif choice == "8":
         pass
     elif choice == "9":

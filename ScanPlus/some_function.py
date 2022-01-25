@@ -48,6 +48,8 @@ Version: v1.0
 Author: @pkaba, @suzou, @sounan                                                                                                                                         
 GitHub: https://github.com/alexispondo/ScanPlus
 
+ScanPlus is a pentesting program developed by the cybersecurity students at ESATIC, his program allow to scan vulnerability WebSite in following some steps.
+We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(dev)
 ==============================================================================================================================================
 ==============================================================================================================================================
 ==============================================================================================================================================                                                                                                                                         

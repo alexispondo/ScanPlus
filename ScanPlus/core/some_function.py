@@ -36,7 +36,7 @@ S:::::::::::::::SS   cc:::::::::::::::c a::::::::::aa:::a n::::n    n::::nP:::::
  SSSSSSSSSSSSSSS       cccccccccccccccc  aaaaaaaaaa  aaaa nnnnnn    nnnnnnPPPPPPPPPP          llllllll    uuuuuuuu  uuuu  sssssssssss    
                                                                                                                                          
 Name: ScanPlus                                                                                                                                         
-Version: v1.0                                                                                                                                         
+Version: v2.0                                                                                                                                         
 Author: @pkaba, @suzou, @sounan                                                                                                                                         
 GitHub: https://github.com/alexispondo/ScanPlus
 
@@ -60,7 +60,7 @@ We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(de
         \/     \/     \/     \/                         \/ 
 
 Name: ScanPlus                                                                                                                                         
-Version: v1.0                                                                                                                                         
+Version: v2.0                                                                                                                                         
 Author: @pkaba, @suzou, @sounan                                                                                                                                         
 GitHub: https://github.com/alexispondo/ScanPlus
 
@@ -84,7 +84,7 @@ We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(de
  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
 
 Name: ScanPlus                                                                                                                                         
-Version: v1.0                                                                                                                                         
+Version: v2.0                                                                                                                                         
 Author: @pkaba, @suzou, @sounan                                                                                                                                         
 GitHub: https://github.com/alexispondo/ScanPlus
 

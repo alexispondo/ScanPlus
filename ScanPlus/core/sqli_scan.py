@@ -36,7 +36,7 @@ def test_sqli_payload(url, username, password, submit, error):
                     print_green("login-{} : username = {} || password = {} =====>>>>> Good Login".format(k, user, passw))
                     break
             else:
-                print_green("Check your connection settings")
+                print_green("Vérifiez vos paramètres de connexion")
                 break
 
 
@@ -48,22 +48,22 @@ def test_sqli_payload(url, username, password, submit, error):
 
 def SQL_i():
     print_blue("\n\n===============================================================================================")
-    print_blue("You have choisen SQL injection Attack")
+    print_blue("Vous avez choisi un scan d'injection sql")
 
-    print("\nEnter your url login ex: https://example.com/login")
+    print("\nEntrez l'URL de la page de connexion ex: https://example.com/login")
     url = input("scanplus> url >> ")
 
-    print("\nEnter the name of Username parameter. ex: user")
+    print("\nEntrez le nom de l'input username. ex: user")
     username = input("scanplus> username >> ")
 
-    print("\nEnter the name of your password parameter. ex: pass")
+    print("\nEntrez le nom de l'input password. ex: pass")
     password = input("scanplus> password >> ")
 
 
-    print("\nEnter the error result. ex: Identifiants invalides.")
+    print("\nEntrez le message d'erreur. ex: Identifiants invalides.")
     error = input("scanplus> error >> ")
 
-    print("\nEnter the name of your submit parameter. ex: submit")
+    print("\nEntrez le nom du bouton d'envoi. ex: submit")
     submit = input("scanplus> submit >> ")
 
 

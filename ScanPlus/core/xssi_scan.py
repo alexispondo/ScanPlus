@@ -31,9 +31,9 @@ def test_xssi_payload(url, payloads, submit):
                 k = k + 1
                 print_yellow_bold("Payload-{} : {} =====>>>>> ok test".format(k, payload))
             else:
-                print_green("Check your connection settings")
+                print_green("Vérifiez vos paramètres de connexion")
                 break
-    print_blue("\nGo to see on your website {} if one playload at been execute\n".format(url))
+    print_blue("\nRendez-vous sur {} pour verifier si l'un des payloads a été exécuté\n".format(url))
 
 
 
@@ -44,15 +44,15 @@ def test_xssi_payload(url, payloads, submit):
 
 def XSS_i():
     print_blue("\n\n===============================================================================================")
-    print_blue("You have choisen XSS injection Attack")
+    print_blue("Vous avez choisi le scan d'injection XSS")
 
-    print("\nEnter your url form ex: https://example.com/login")
+    print("\nEntrez l'URL du formulaire ex: https://example.com/login")
     url = input("scanplus> url >> ")
 
-    print("\nEnter the name of form parameter. ex: user")
+    print("\nEntrez le nom de l'input du formulaire.. ex: user")
     payloads = input("scanplus> username >> ")
 
-    print("\nEnter the name of your submit parameter. ex: submit")
+    print("\nEntrez le nom du bouton d'envoi. ex: submit")
     submit = input("scanplus> submit >> ")
 
 

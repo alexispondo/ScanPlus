@@ -29,11 +29,11 @@ def can_i_do_brute_force(url, username, password):
                 k = k + 1
                 print_green("{} ".format(k))
                 if k == 10:
-                    print_red("[-] The BruteForce attack is possible because more than 10 connection may be execute")
-                    print_red("[-] This site does not have a number of connection limits")
+                    print_red("[-] L'attaque brutefoce est possible car plus de 10 connexions échouées ont été exécuté")
+                    print_red("[-] Ce site n'a pas de nombre de connexion limité")
             else:
-                print_green("[+] The BruteForce attack isn't possible !!")
-                print_green("[+] This site have a number of connection limits")
+                print_green("[+] L'attaque bruteforce n'est pas possible !!")
+                print_green("[+] Ce site a un nombre de connexion limité")
                 break
 
 
@@ -45,15 +45,15 @@ def can_i_do_brute_force(url, username, password):
 
 def is_bruteforce():
     print_blue("\n\n===============================================================================================")
-    print_blue("You have choisen BruteForce Attack")
+    print_blue("Vous avez choisi le scan is_bruteforce qui vérifie si l'attaque bruteforce est possible")
 
-    print("\nEnter your url login ex: https://example.com/login")
+    print("\nEntrez l'url de la page de connexion ex: https://example.com/login")
     url = input("scanplus> url >> ")
 
-    print("\nEnter the name of Username parameter. ex: user")
+    print("\nEntrez le nom de l'input username. ex: user")
     username = input("scanplus> username >> ")
 
-    print("\nEnter the name of your password parameter. ex: pass")
+    print("\nEntrez le nom de l'input password. ex: pass")
     password = input("scanplus> password >> ")
 
     can_i_do_brute_force(url, username, password)

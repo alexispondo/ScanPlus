@@ -31,12 +31,12 @@ def test_if_user_and_passw_are_good(url, username, password, submit, error):
             if resp.status_code == 200:
                 k = k + 1
                 if error in resp.text:
-                    print_red_bold("login-{} : username = {} || password = {} =====>>>>> Bad Login".format(k, user, passw))
+                    print_red_bold("login-{} : username = {} || password = {} =====>>>>> Username or Password Incorrect".format(k, user, passw))
                 else:
-                    print_green("login-{} : username = {} || password = {} =====>>>>> Good Login".format(k, user, passw))
+                    print_green("login-{} : username = {} || password = {} =====>>>>> Correct Username and Password".format(k, user, passw))
                     break
             else:
-                print_green("Check your connection settings")
+                print_green("Vérifiez vos paramètres de connexion")
                 break
 
 
@@ -48,22 +48,22 @@ def test_if_user_and_passw_are_good(url, username, password, submit, error):
 
 def CommonAuth():
     print_blue("\n\n===============================================================================================")
-    print_blue("You have choisen Common Authentification Attack")
+    print_blue("Vous avez choisi le scan des informations d'identification commune")
 
-    print("\nEnter your url login ex: https://example.com/login")
+    print("\nEntrez l'URL de la page de connexion ex: https://example.com/login")
     url = input("scanplus> url >> ")
 
-    print("\nEnter the name of Username parameter. ex: user")
+    print("\nEntrez le nom de l'input username. ex: user")
     username = input("scanplus> username >> ")
 
-    print("\nEnter the name of your password parameter. ex: pass")
+    print("\nEntrez le nom de l'input password. ex: pass")
     password = input("scanplus> password >> ")
 
 
-    print("\nEnter the error result. ex: Identifiants invalides.")
+    print("\nEntrez le message d'erreur. ex: Identifiants invalides.")
     error = input("scanplus> error >> ")
 
-    print("\nEnter the name of your submit parameter. ex: submit")
+    print("\nEntrez le nom du bouton d'envoi. ex: submit")
     submit = input("scanplus> submit >> ")
 
     test_if_user_and_passw_are_good(url, username, password, submit, error)

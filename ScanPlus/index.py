@@ -15,16 +15,16 @@ from core.cmd_i_scan import *
 
 def first_display():
     clear()
-    print_yellow("Starting ScanPlus...")
+    print_yellow("Demarrage ScanPlus...")
     banner()
-    print_blue("What SCAN do you wants to do ?\n")
+    print_blue("Quel scan voulez-vous executer ?\n")
     print_blue("1) Scan Global\n")
     print_blue("2) Scan Is_BruteForce\n")
     print_blue("3) Scan CommonUserPass\n")
-    print_blue("4) Scan SQL injection\n")
-    print_blue("5) Scan XSS injection\n")
-    print_blue("6) Scan command injection\n")
-    print_blue("q) Quit")
+    print_blue("4) Scan Injection SQL\n")
+    print_blue("5) Scan Injection XSS\n")
+    print_blue("6) Scan Injection de commande\n")
+    print_blue("q) Quitter")
     print("")
     answer = input("scanplus> ")
     return answer
@@ -46,7 +46,7 @@ def main():
         elif answer == "6":
             CMD_i()
         elif answer == "q":
-            print("Good Bye!!!")
+            print("Bye Bye!!!")
             break
         else:
             answer = first_display()

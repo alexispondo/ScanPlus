@@ -9,15 +9,15 @@ def is_exist(address):
     try:
         req = requests.get(address)
         if req.status_code in range(200,300) :
-            print_green("\n[+] {} exist".format(address))
+            print_green("\n[+] {} existe".format(address))
             return True
         elif req.status_code in range(400,500):
-            print_red("\n[-] Your web site {} not exist".format(address))
+            print_red("\n[-] Votre site web {} n'existe pas".format(address))
             return False
     except (requests.exceptions.MissingSchema, requests.exceptions.InvalidURL) as err:
-        print("\nPlease enter a valid URL: {}".format(str(err)))
+        print("\nSVP Entrez une url valid: {}".format(str(err)))
     except Exception as err:
-        print("\nOne error is product: {}".format(str(err)))
+        print("\nUne erreure s'est produite: {}".format(str(err)))
 
 
 
@@ -27,14 +27,14 @@ def get_robot(address):
     try:
         add = address + "/robots.txt"
         req = requests.get(add)
-        print_blue("\n######### GET ROBOTS.TXT #########")
+        print_blue("\n######### OBTENIR ROBOTS.TXT #########")
         if req.status_code in range(200,300) :
-            print_yellow("\n[-] Warning!!!: The File robots.txt is found ({})".format(add))
+            print_yellow("\n[-] Attention!!!: Le fichier robots.txt a été trouvé ({})".format(add))
             print_yellow(req.text)
         elif req.status_code in range(400,500):
-            print_green("\n[+] Great!!!: The File robots.txt is not found")
+            print_green("\n[+] Super!!!: The File robots.txt n'a pas été trouvé")
         elif req.status_code in range(300,400):
-            print_yellow("\n[-] Warning!!!: we have a redirection")
+            print_yellow("\n[-] Attention!!!: Vous avez une redirection")
     except Exception as err:
         print(str(err))
 
@@ -44,13 +44,13 @@ def get_sitemap(address):
     try:
         add = address + "/sitemap.xml"
         req = requests.get(add)
-        print_blue("\n######### GET SITEMAP.XML #########")
+        print_blue("\n######### OBTENIR SITEMAP.XML #########")
         if req.status_code in range(200,300) :
-            print_yellow("\n[-] Warning!!!: The File sitemap.xml is found ({})".format(add))
+            print_yellow("\n[-] Attention!!!: Le fichier sitemap.xml a été trouvé ({})".format(add))
         elif req.status_code in range(300,400):
-            print_yellow("\n[-] Warning!!!: we have a redirection ({})".format(add))
+            print_yellow("\n[-] Attention!!!: Vous avez une redirection ({})".format(add))
         elif req.status_code in range(400,500):
-            print_green("\n[+] Great!!!: The File sitemap.xml is not found")
+            print_green("\n[+] Super!!!: Le fichier sitemap.xml n'a pas été trouvé")
     except Exception as err:
         print(str(err))
 
@@ -65,9 +65,9 @@ def http_https(address):
         print_blue("\n######### HTTP/HTTPS #########")
         protocol = address.split(":")[0]
         if protocol == "http":
-            print_red("\n[-] Danger!!!: The Hyper Text Transfert Protocol that you use is not secure. \nUse https:// and not http:// for crypte your communication")
+            print_red("\n[-] Danger!!!: Le Hyper Text Transfert Protocol que vous utiliser n'est pas sécurisé. \nUtiliser https:// et non http:// pour crypter la communication")
         elif protocol == "https":
-            print_green("\n[+] Great!!!: You use the great Hyper Text Transfert Protocol. \nThis https is more secure")
+            print_green("\n[+] Super!!!: Vous utiliser un super Hyper Text Transfert Protocol. \nCe https est plus sécurisé")
     except Exception as err:
         print(str(err))
 
@@ -76,14 +76,14 @@ def http_https(address):
 ## get programmation language
 def prog_lang(address):
     try:
-        print_blue("\n######### PROGRAMMATION LANGUAGE #########")
+        print_blue("\n######### LANGAGE DE PROGRAMMATION #########")
         req = requests.get(address)
         key_lang = "X-Powered-By"
         if key_lang in req.headers:
-            print_yellow("\n[-] Warning!!!: Programmation language detected")
-            print_yellow("[-] Programmation Language: {}".format(req.headers[key_lang]))
+            print_yellow("\n[-] Attention!!!: Langage De Programmation Détecté")
+            print_yellow("[-] Langage de Programmation: {}".format(req.headers[key_lang]))
         else:
-            print_green("\n[+] Great!!!: Your programing language is not display")
+            print_green("\n[+] Super!!!: Le langage de programmation ")
     except Exception as err:
         print(str(err))
 
@@ -92,14 +92,14 @@ def prog_lang(address):
 ## get web server name
 def webserver_name(address):
     try:
-        print_blue("\n######### WEB SERVER NAME #########")
+        print_blue("\n######### NOM ET VERSION DU SERVEUR WEB #########")
         req = requests.get(address)
         key_server= "Server"
         if key_server in req.headers:
-            print_yellow("\n[-] Warning!!!: Web Server Name Detected")
-            print_yellow("[-] Web Server Name: {}".format(req.headers[key_server]))
+            print_yellow("\n[-] Attention!!!: Le Serveur WEB à été détecté")
+            print_yellow("[-] Nom du serveur WEB: {}".format(req.headers[key_server]))
         else:
-            print_green("\n[+] Great!!!: Your Web Server Name is not display is not display")
+            print_green("\n[+] Super!!!: Le serveur WEB n'a pas été détecté")
     except Exception as err:
         print(str(err))
 
@@ -109,17 +109,16 @@ def webserver_name(address):
 ## Main program of global scan
 def global_scan():
     print_blue("\n\n===============================================================================================")
-    print_blue("You have chosen Global Scan")
-    print_blue("This Scan allow to :\n"
-               "[*] get robots.txt \n"
-               "[*] get sitemap.xml\n"
-               "[*] secure or not secure Hyper Text Transfer Protocol (http/https) \n"
-               "[*] get programmation language\n"
-               "[*] get WebServer name and version\n"
-               "[*] list vulnerability of this version and get the version which fix it")
+    print_blue("Vous avez choisi Global SCAN")
+    print_blue("Ce scan permet de :\n"
+               "[*] obtenir robots.txt \n"
+               "[*] obtenir sitemap.xml\n"
+               "[*] Hyper Text Transfer Protocol est sécurisé où non (http/https) \n"
+               "[*] obtenir le langage de programmation\n"
+               "[*] Obtenir la version et le nom du serbeur web")
 
     print("")
-    print_blue("[-] Enter your web site address. ex: http://127.0.0.1 or https://my_site.com (don't forget http or https)")
+    print_blue("[-] Entrez l'adresse url de votre site web. ex: http://127.0.0.1 or https://my_site.com (don't forget http or https)")
     site_addr = input("scanplus> address >> ")
     print()
     if is_exist(site_addr):

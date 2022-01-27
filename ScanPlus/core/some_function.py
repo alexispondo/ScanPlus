@@ -7,6 +7,7 @@ import random
 print_blue = lambda x: cprint(x, 'blue')  # Color text on blue
 print_red = lambda x: cprint(x, "red")
 print_green =  lambda x: cprint(x, "green")
+#def print_green(skk): print("\033[92m {}\033[00m" .format(skk))
 print_yellow = lambda x: cprint(x, "yellow")
 print_yellow_bold = lambda x: cprint(x, "yellow", attrs=['bold'])
 print_red_bold = lambda x: cprint(x, "red", attrs=['bold'])
@@ -16,11 +17,17 @@ def banner():
     info_bas = """
 Name: ScanPlus                                                                                                                                         
 Version: v2.0                                                                                                                                         
-Author: @pkaba, @suzou, @sounan                                                                                                                                         
+Author: {
+            PONDO Alexis:
+            DIDIA Suzanne: 
+            KONE Sounan:
+}                                                                                                                                         
 GitHub: https://github.com/alexispondo/ScanPlus
 
-ScanPlus is a pentesting program developed by the cybersecurity students at ESATIC, his program allow to scan vulnerability WebSite in following some steps.
-We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(dev)
+ScanPLus est un programme de scan de vulnérabilité développé par les étudiants de l'ESATIC. 
+Ce programme permet de scanner plusieurs vulnerabilités communes des sites web.
+Sa différence vient du fait qu'il peut effectuer plusieurs types de scans distinct et independament de la plateforme.
+
     """
     ban1 = """
 ==============================================================================================================================================

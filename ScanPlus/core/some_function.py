@@ -18,9 +18,18 @@ def banner():
 Name: ScanPlus                                                                                                                                         
 Version: v2.0                                                                                                                                         
 Author: {
-            PONDO Alexis:
-            DIDIA Suzanne: 
-            KONE Sounan:
+            Developpeur: {
+                Nom: PONDO Alexis
+                LinkdIn: https://www.linkedin.com/in/alexis-pondo/
+            },
+            Developpeur: {
+                Nom: DIDIA Suzanne 
+                LinkdIn: https://www.linkedin.com/in/suzanne-didia-9a630417a/
+            },
+            Developpeur: {
+                Nom: KONE Sounan 
+                LinkdIn: https://www.linkedin.com/in/sounan-franck-aristide-kon%C3%A9-8b7174174/
+            }
 }                                                                                                                                         
 GitHub: https://github.com/alexispondo/ScanPlus
 

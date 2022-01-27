@@ -27,6 +27,7 @@ def can_i_do_brute_force(url, username, password):
 
             if resp.status_code == 200:
                 k = k + 1
+                print_green("{} ".format(k))
                 if k == 10:
                     print_red("[-] The BruteForce attack is possible because more than 10 connection may be execute")
                     print_red("[-] This site does not have a number of connection limits")

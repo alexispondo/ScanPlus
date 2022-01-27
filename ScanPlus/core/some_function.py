@@ -13,6 +13,15 @@ print_red_bold = lambda x: cprint(x, "red", attrs=['bold'])
 clear = lambda: os.system('clear')  # clear terminal
 
 def banner():
+    info_bas = """
+Name: ScanPlus                                                                                                                                         
+Version: v2.0                                                                                                                                         
+Author: @pkaba, @suzou, @sounan                                                                                                                                         
+GitHub: https://github.com/alexispondo/ScanPlus
+
+ScanPlus is a pentesting program developed by the cybersecurity students at ESATIC, his program allow to scan vulnerability WebSite in following some steps.
+We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(dev)
+    """
     ban1 = """
 ==============================================================================================================================================
 ======================================================= ScanPlus =============================================================================
@@ -35,13 +44,7 @@ S::::::SSSSSS:::::S c:::::::::::::::::ca:::::aaaa::::::a  n::::n    n::::nP:::::
 S:::::::::::::::SS   cc:::::::::::::::c a::::::::::aa:::a n::::n    n::::nP::::::::P          l::::::l  uu::::::::uu:::u s:::::::::::ss  
  SSSSSSSSSSSSSSS       cccccccccccccccc  aaaaaaaaaa  aaaa nnnnnn    nnnnnnPPPPPPPPPP          llllllll    uuuuuuuu  uuuu  sssssssssss    
                                                                                                                                          
-Name: ScanPlus                                                                                                                                         
-Version: v2.0                                                                                                                                         
-Author: @pkaba, @suzou, @sounan                                                                                                                                         
-GitHub: https://github.com/alexispondo/ScanPlus
-
-ScanPlus is a pentesting program developed by the cybersecurity students at ESATIC, his program allow to scan vulnerability WebSite in following some steps.
-We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(dev)
+""" + info_bas + """
 ==============================================================================================================================================
 ==============================================================================================================================================
 ==============================================================================================================================================                                                                                                                                         
@@ -59,13 +62,7 @@ We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(de
 /_______  /\___  >____  /___|  /____|   |____/____//____  >
         \/     \/     \/     \/                         \/ 
 
-Name: ScanPlus                                                                                                                                         
-Version: v2.0                                                                                                                                         
-Author: @pkaba, @suzou, @sounan                                                                                                                                         
-GitHub: https://github.com/alexispondo/ScanPlus
-
-ScanPlus is a pentesting program developed by the cybersecurity students at ESATIC, his program allow to scan vulnerability WebSite in following some steps.
-We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(dev)
+""" + info_bas + """
 
 """
 
@@ -83,14 +80,23 @@ We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(de
 | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
 
-Name: ScanPlus                                                                                                                                         
-Version: v2.0                                                                                                                                         
-Author: @pkaba, @suzou, @sounan                                                                                                                                         
-GitHub: https://github.com/alexispondo/ScanPlus
-
-ScanPlus is a pentesting program developed by the cybersecurity students at ESATIC, his program allow to scan vulnerability WebSite in following some steps.
-We have two main scan type: Basic scan and Scan based on OWASP Top 10".format(dev)
+""" + info_bas + """
 
 """
-    ban = [ban1, ban2, ban3]
-    print_yellow_bold(random.choice(ban))
+
+    ban4 = """
+    
+ $$$$$$\                               $$$$$$$\  $$\                     
+$$  __$$\                              $$  __$$\ $$ |                    
+$$ /  \__| $$$$$$$\ $$$$$$\  $$$$$$$\  $$ |  $$ |$$ |$$\   $$\  $$$$$$$\ 
+\$$$$$$\  $$  _____|\____$$\ $$  __$$\ $$$$$$$  |$$ |$$ |  $$ |$$  _____|
+ \____$$\ $$ /      $$$$$$$ |$$ |  $$ |$$  ____/ $$ |$$ |  $$ |\$$$$$$\  
+$$\   $$ |$$ |     $$  __$$ |$$ |  $$ |$$ |      $$ |$$ |  $$ | \____$$\ 
+\$$$$$$  |\$$$$$$$\\$$$$$$$ |$$ |  $$ |$$ |      $$ |\$$$$$$  |$$$$$$$  |
+ \______/  \_______|\_______|\__|  \__|\__|      \__| \______/ \_______/ 
+                                                                         
+    """ + info_bas + """
+    """
+    ban = [ban1, ban2, ban3, ban4]
+    #print_yellow_bold(random.choice(ban))
+    print_yellow_bold(ban4)

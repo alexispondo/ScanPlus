@@ -21,15 +21,15 @@ def test_command_i_payload(url, payloads, submit):
             except Exception as e:
                 print(e)
             cookies = requests.utils.cookiejar_from_dict(requests.utils.dict_from_cookiejar(session.cookies))
-            print(cookies)
+            #print(cookies)
             try:
                 resp = session.post(link, headers=headers, data=payload, cookies=cookies)
             except Exception as e:
-                print(e)
-            print(resp.headers)
+                print(e)   
             if resp.status_code == 200:
                 k = k + 1
                 print_yellow_bold("Payload-{} : {} =====>>>>> ok test".format(k, payload))
+                print(resp.text)
             else:
                 print_green("Vérifiez vos paramètres de connexion")
                 break

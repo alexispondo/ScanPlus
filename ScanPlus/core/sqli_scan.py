@@ -22,12 +22,12 @@ def test_sqli_payload(url, username, password, submit, error):
             except Exception as e:
                 print(e)
             cookies = requests.utils.cookiejar_from_dict(requests.utils.dict_from_cookiejar(session.cookies))
-            print(cookies)
+            #print(cookies)
             try:
                 resp = session.post(link, headers=headers, data=payload, cookies=cookies)
             except Exception as e:
                 print(e)
-            print(resp.headers)
+            #print(resp.headers)
             if resp.status_code == 200:
                 k = k + 1
                 if error in resp.text:

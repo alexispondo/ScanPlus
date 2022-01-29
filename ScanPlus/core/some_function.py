@@ -1,5 +1,4 @@
-import pyfiglet
-from termcolor import colored, cprint
+from termcolor import cprint
 import os
 import random
 

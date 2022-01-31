@@ -17,7 +17,6 @@ Demarrer le programme
 ```
 python3 index.py
 ```
-![Screenshot_2022-01-27_11_26_58](https://user-images.githubusercontent.com/47490330/151662328-5b9b486e-b3ee-44f6-9867-e26473fa76ee.png)
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/47490330/151779067-257c280d-e594-489b-b886-1a381e973d6a.gif)
 
 # Caractéristiques du programme
@@ -42,7 +41,7 @@ Ce type de scan permet entre autre de:
 * recuperer le language de programmation
 * recuperer le nom et la version du serveur web
 
-![Screenshot_2022-01-27_11_27_20](https://user-images.githubusercontent.com/47490330/151662369-f42457a1-a197-4668-a694-f1abd8df3277.png)
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/47490330/151781228-1efc6828-49f2-461a-8d19-9a705efe8d31.gif)
 
 **2) Scan Is_BruteForce**
 

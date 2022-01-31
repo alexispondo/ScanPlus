@@ -1,13 +1,4 @@
-#Installation
-
-**[+] Installer pip**
-
-Si vous n'avez pas encore la dernière version de pip utiliser ceci:
-```
-sudo apt-get install python3-pip
-```
-
-**[+] Télécharger le projet**
+# Installation
 
 Télécharger le projet sur git
 
@@ -27,6 +18,7 @@ Demarrer le programme
 python3 index.py
 ```
 ![Screenshot_2022-01-27_11_26_58](https://user-images.githubusercontent.com/47490330/151662328-5b9b486e-b3ee-44f6-9867-e26473fa76ee.png)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/47490330/151779067-257c280d-e594-489b-b886-1a381e973d6a.gif)
 
 # Caractéristiques du programme
 

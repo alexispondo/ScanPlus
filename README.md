@@ -48,7 +48,7 @@ Ce type de scan permet entre autre de:
 Le scan  is_BruteForce est un scan qui permet de detecter si un formulaire de connexion est BruteForçable.
 En effet le programme test 10 connexion erronné consecutive et regarde la reaction du serveur.
 Le formulaire de connexion est sécurité si à un 03moment du scan le serveur refuse les demandes de connexions à cause d’un certain nombre de tentative échoué, dans le cas contraire il est BruteForçable.
-![Screenshot_2022-01-27_11_28_25](https://user-images.githubusercontent.com/47490330/151662412-043ddd5c-5c11-4f3d-b9ec-9e769a473368.png)
+![is_b](https://github.com/alexispondo/ScanPlus/blob/master/scan%20is_brute_4.gif)
 
 **3) Scan CommonUserPass**
 

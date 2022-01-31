@@ -19,12 +19,12 @@ Installer les modules necessaires
 ```
 cd ScanPlus
 cd ScanPlus
-python installer.py
+python3 installer.py
 ```
 
 Demarrer le programme
 ```
-python index.py
+python3 index.py
 ```
 ![Screenshot_2022-01-27_11_26_58](https://user-images.githubusercontent.com/47490330/151662328-5b9b486e-b3ee-44f6-9867-e26473fa76ee.png)
 

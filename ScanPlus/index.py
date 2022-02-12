@@ -1,10 +1,5 @@
 #!/usr/bin/python3
 
-# à executer dabord
-# export PYTHONPATH="${PYTHONPATH}:/home/alexispondo/projet_pi/"
-# import os
-# os.system("source pi_env/bin/activate")
-
 from core.some_function import *
 from core.global_scan import *
 from core.is_bruteforce_scan import *

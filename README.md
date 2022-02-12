@@ -4,6 +4,8 @@
 
 [+] Avoir Git installé
 
+[+] Vous pouvez aussi mettre en place le site web de test present dans le Site_Web
+
 # Installation
 
 Télécharger le projet sur git

@@ -50,7 +50,7 @@ def XSS_i():
     url = input("scanplus> url >> ")
 
     print("\nEntrez le nom de l'input du formulaire.. ex: user")
-    payloads = input("scanplus> username >> ")
+    payloads = input("scanplus> formulaire >> ")
 
     print("\nEntrez le nom du bouton d'envoi. ex: submit")
     submit = input("scanplus> submit >> ")

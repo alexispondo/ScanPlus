@@ -1,4 +1,4 @@
-# Prerequis
+# Prérequis
 
 [+] Avoir python où python3 installé
 

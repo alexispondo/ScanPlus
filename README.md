@@ -1,6 +1,6 @@
 # Prérequis
 
-[+] Avoir python où python3 installé
+[+] Avoir python ou python3 installé
 
 [+] Avoir Git installé
 

@@ -7,7 +7,7 @@ from .some_function import *
 ## Test if URL is valid
 def is_exist(address):
     try:
-        req = requests.get(address)
+        req = requests.get(address, headers={"User-Agent": "Mozilla/5.0"})
         if req.status_code in range(200,300) :
             print_green("\n[+] {} existe".format(address))
             return True
